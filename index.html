@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="https://i.postimg.cc/MZ9VVWn4/Untitled-design.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PROFESSOR AYAN - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+      height: 100%;
+      overflow-x: hidden;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      background: black;
+    }
+
+    /* Background animation */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://i.postimg.cc/Y9BvDKZp/green-animation-bg.gif') center center/cover no-repeat;
+      z-index: -2;
+      animation: moveBackground 20s linear infinite;
+      opacity: 0.4;
+    }
+
+    @keyframes moveBackground {
+      0% { background-position: center top; }
+      50% { background-position: center center; }
+      100% { background-position: center bottom; }
+    }
+
+    /* Navbar */
+    nav {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: 600;
+      color: rgb(255, 247, 0);
+      text-shadow: 0 0 10pxrgb(255, 255, 224), 0 0 20px #rgb(255, 255, 224);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    .nav-links a {
+      color: yellow;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #00e5ff;
+      text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea; }
+      100% { text-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea; }
+    }
+
+    .section {
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .hero {
+      padding: 6rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      color: #00e5ff;
+      text-shadow: 0 0 15px #00ffea, 0 0 30px #00ffea;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    .typed-text {
+      font-size: 1.5rem;
+      color: #00e5ff;
+      margin-top: 1rem;
+    }
+
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #00e5ff;
+      display: block;
+      margin: 2rem auto;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .more-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: .8rem 1.5rem;
+      background: rgb(255, 255, 224);
+      color: black;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .more-btn:hover {
+      background: #00b8d4;
+    }
+
+    /* Contact Styling */
+    .contact-info a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    .contact-info a:hover {
+      color: #00e5ff;
+      text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      color: #00e5ff;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease, text-shadow 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.9);
+      text-align: center;
+      padding: 2rem;
+      font-size: .9rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    footer a {
+      color: rgb(255, 255, 224);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">PROFESSOR AYAN</div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero section animate__animated animate__fadeIn" id="home">
+    <h1>Hi, I'm Professor Ayan</h1>
+    <div class="typed-text"></div>
+    <p>Graphics Designer & AI Engineer creating elegant solutions and powerful digital designs.</p>
+  </section>
+
+  <section class="section animate__animated animate__fadeInUp" id="about">
+    <img src="https://i.postimg.cc/MZ9VVWn4/Untitled-design.png" alt="Profile Pic" class="profile-pic" />
+    <h2>About Me</h2>
+    <p>HHi, I’m Ayan, a Graphics Designer and AI Engineer blending creativity with technology to build smart, stunning digital experiences.
+
+</p>
+    <a class="more-btn" href="https://professor-ayan.vercel.app/" target="_blank">More About Developer</a>
+  </section>
+
+  <section class="section animate__animated animate__fadeInUp" id="services">
+    <h2>Services</h2>
+    <p>Custom web development, AI integrations, logo design, branding, and freelance support for digital creatives.</p>
+  </section>
+
+  <section class="section contact animate__animated animate__fadeInUp" id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:professorayanxoffical@gmail.com">aprofessorayanxoffical@gmail.com</a></p>
+      <p>Phone: <a href="tel:+923360184916">+92 336 0184916</a></p>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/ayanx_offical/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61571308793752" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 PROFESSOR AYAN. All rights reserved.</p>
+  </footer>
+
+  <script>
+    var typed = new Typed(".typed-text", {
+      strings: ["Graphics Designer", "AI Engineer", "Web Developer", "Creative Freelancer"],
+      typeSpeed: 60,
+      backSpeed: 30,
+      backDelay: 1500,
+      loop: true
+    });
+  </script>
+
+</body>
+</html>
