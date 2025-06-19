@@ -1,24 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="https://i.postimg.cc/MZ9VVWn4/Untitled-design.png" />
+  <link rel="icon" href="https://i.postimg.cc/MZ9VVWn4/Untitled-design.png" type="image/jpeg" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PROFESSOR AYAN - Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body, html {
-      height: 100%;
-      overflow-x: hidden;
-      font-family: 'Poppins', sans-serif;
-      color: white;
-      background: black;
-    }
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: black;
+  scroll-padding-top: 80px;
+}
 
     /* Background animation */
     body::before {
@@ -40,39 +40,59 @@
 
     /* Navbar */
     nav {
-      background: rgba(0, 0, 0, 0.8);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      z-index: 10;
-    }
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
 
     .logo {
-      font-size: 2rem;
-      font-weight: 600;
-      color: rgb(31, 81, 255);
-      text-shadow: 0 0 10pxrgb(255, 255, 224), 0 0 20px #rgb(255, 255, 224);
-      animation: glow 2s ease-in-out infinite alternate;
-    }
+  font-size: 2rem;
+  font-weight: 600;
+  color: #00BFFF;
+  text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF;
+  animation: glow 2s ease-in-out infinite alternate;
+  font-family: Helvetica, sans-serif;
+}
 
     .nav-links a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s, text-shadow 0.3s;
-    }
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #00BFFF;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
     .nav-links a:hover {
-      color: rgb(31, 81, 255);
-      text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+      color: #00BFFF;
+      text-shadow: 0 0 5px #00BFFF, 0 0 10px #00BFFF, 0 0 20px #00BFFF;
     }
 
     @keyframes glow {
-      0% { text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea; }
-      100% { text-shadow: 0 0 20px #00ffea, 0 0 40px #00ffea; }
+      0% { text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF; }
+      100% { text-shadow: 0 0 20px #00BFFF, 0 0 40px #00BFFF; }
     }
 
     .section {
@@ -88,14 +108,14 @@
 
     .hero h1 {
       font-size: 3.5rem;
-      color: #00e5ff;
-      text-shadow: 0 0 15px #00ffea, 0 0 30px #00ffea;
+      color: #00BFFF;
+      text-shadow: 0 0 15px #00BFFF, 0 0 30px #00BFFF;
       animation: glow 2s ease-in-out infinite alternate;
     }
 
     .typed-text {
       font-size: 1.5rem;
-      color: #00e5ff;
+      color: #00BFFF;
       margin-top: 1rem;
     }
 
@@ -110,7 +130,7 @@
       height: 160px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid #00e5ff;
+      border: 4px solid #00BFFF;
       display: block;
       margin: 2rem auto;
     }
@@ -131,7 +151,7 @@
       display: inline-block;
       margin-top: 2rem;
       padding: .8rem 1.5rem;
-      background: rgb(255, 255, 224);
+      background: #00BFFF;
       color: black;
       font-weight: bold;
       border-radius: 5px;
@@ -140,7 +160,7 @@
     }
 
     .more-btn:hover {
-      background: #00b8d4;
+      background: #009ACD;
     }
 
     /* Contact Styling */
@@ -151,8 +171,8 @@
     }
 
     .contact-info a:hover {
-      color: #00e5ff;
-      text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+      color: #00BFFF;
+      text-shadow: 0 0 5px #00BFFF, 0 0 10px #00BFFF, 0 0 20px #00BFFF;
     }
 
     .social-icons {
@@ -160,7 +180,7 @@
     }
 
     .social-icons a {
-      color: rgb(31, 81, 255);
+      color: #00BFFF;
       margin: 0 10px;
       font-size: 1.5rem;
       transition: transform 0.3s ease, text-shadow 0.3s;
@@ -168,7 +188,7 @@
 
     .social-icons a:hover {
       transform: scale(1.2);
-      text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+      text-shadow: 0 0 5px #00BFFF, 0 0 10px #00BFFF, 0 0 20px #00BFFF;
     }
 
     footer {
@@ -181,16 +201,43 @@
     }
 
     footer a {
-      color: rgb(255, 255, 224);
+      color: #00BFFF;
       text-decoration: none;
     }
-  </style>
+  #scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #00BFFF;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #00BFFF;
+  transition: background-color 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background-color: #009ACD;
+}
+
+
+
+
+
+</style>
 </head>
-<body>
+<body onload="toggleAIChat()">
 
   <nav>
     <div class="logo">PROFESSOR AYAN</div>
     <div class="nav-links">
+      <a href="#" onclick="toggleAIChat()"><i class='fas fa-robot'></i></a>
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -218,10 +265,12 @@
     <p>Custom web development, AI integrations, logo design, branding, and freelance support for digital creatives.</p>
   </section>
 
-  <section class="section contact animate__animated animate__fadeInUp" id="contact">
+
+
+<section class="section contact animate__animated animate__fadeInUp" id="contact">
     <h2>Contact Me</h2>
     <div class="contact-info">
-      <p>Email: <a href="mailto:professorayanxoffical@gmail.com">aprofessorayanxoffical@gmail.com</a></p>
+      <p>Email: <a href="mailto:ayanishaque0987@gmail.com">ayanishaque0987@gmail.com</a></p>
       <p>Phone: <a href="tel:+923360184916">+92 336 0184916</a></p>
     </div>
     <div class="social-icons">
@@ -236,15 +285,81 @@
     <p>&copy; 2025 PROFESSOR AYAN. All rights reserved.</p>
   </footer>
 
+<!-- AI Assistant Widget -->
+<div id="aiChatWidget" style="position:fixed;bottom:20px;left:20px;z-index:9999;background:#111;padding:1rem;border:2px solid #00BFFF;border-radius:8px;color:#fff;width:260px;max-height:350px;overflow:auto;display:none;">
+  <strong style="color:#00BFFF;">Ask Me Anything 👇</strong>
+  <input type="text" id="aiInput" placeholder="Ask about this website..." style="margin-top:10px;width:100%;padding:8px;border-radius:4px;border:none;margin-bottom:10px;">
+  <div id="aiResponse" style="font-size:0.9rem;color:#ccc;margin-bottom:10px;"></div>
+  
+</div>
+</div>
+
+
+
+<!-- Scroll to Top Button -->
+<button onclick="topFunction()" id="scrollTopBtn" title="Go to top">
+  ↑
+</button>
+
   <script>
     var typed = new Typed(".typed-text", {
       strings: ["Graphics Designer", "AI Engineer", "Web Developer", "Creative Freelancer"],
-      typeSpeed: 60,
-      backSpeed: 30,
-      backDelay: 1500,
+      typeSpeed: 100,
+      backSpeed: 60,
+      backDelay: 800,
       loop: true
     });
   </script>
 
+<script>
+// Scroll to top button logic
+let scrollBtn = document.getElementById("scrollTopBtn");
+window.onscroll = function() {
+  scrollBtn.style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+};
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+<script>
+function toggleAIChat() {
+  const chat = document.getElementById("aiChatWidget");
+  chat.style.display = chat.style.display === "none" ? "block" : "none";
+}
+
+document.getElementById("aiInput").addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    const input = e.target.value.toLowerCase();
+    let response = "I'm here to help with anything about this site!";
+
+    if (input.includes("services")) response = "I offer web development, AI integration, and graphic design services.";
+    else if (input.includes("ayan")) response = "Professor Ayan is a web developer, AI engineer, and creative freelancer.";
+    else if (input.includes("contact")) response = "You can contact me at ayanishaque0987@gmail.com or call +92 336 0184916.";
+    else if (input.includes("portfolio")) response = "This is my personal portfolio website showcasing my work.";
+
+    document.getElementById("aiResponse").innerText = response;
+    e.target.value = "";
+  }
+});
+// Optional: Voice input (Web Speech API)
+if ('webkitSpeechRecognition' in window) {
+  const recognition = new webkitSpeechRecognition();
+  recognition.continuous = false;
+  recognition.interimResults = false;
+  recognition.lang = 'en-US';
+
+  recognition.onresult = function(event) {
+    const transcript = event.results[0][0].transcript;
+    document.getElementById("aiInput").value = transcript;
+    document.getElementById("aiInput").dispatchEvent(new KeyboardEvent('keypress', { key: 'Enter' }));
+  };
+
+  document.getElementById("aiInput").addEventListener("dblclick", function() {
+    recognition.start();
+  });
+}
+</script>
 </body>
 </html>
